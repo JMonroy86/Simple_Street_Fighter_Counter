@@ -14,26 +14,28 @@ import 'popper.js';
 import 'bootstrap';
 
 
-let sec =60;
-let min =60;
-let hour =24;
+let sec =59;
+let min =59;
+let hour =2;
 
 let counter = setInterval(() => {
     ReactDOM.render(<Card segundos={sec} minutos={min} horas={hour}  />, document.querySelector("#root"));
     sec--;
     if (sec == 0){
-        sec=60;
+        sec=59;
         min--;
     } else if(min == 0){
-        min=60;
+        min=59;
         hour--;
     } else if (hour==0){
-        hour=24;
+        hour=23;
+        min =59;
+        sec =59;
         clearInterval(counter);
     }
 
    
-},10);
+},1);
 
 
 
