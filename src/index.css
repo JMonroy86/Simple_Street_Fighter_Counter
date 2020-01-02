@@ -1,3 +1,28 @@
 body {
-    background-color: #3f4455;
+    background-color: #000000;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid #7b00ff;
+    color:#003cff;
+    margin: auto;
+    
+}
+.box h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+}
+div h4{
+    font-family: 'Press Start 2P', cursive;
+    color: #40ff00;
+    font-size: 15px;
+}
+.red{
+    color: yellow;
+    font-size: 30px;
 }

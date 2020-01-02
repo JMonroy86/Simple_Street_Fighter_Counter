@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Card from './components/cards.js';
 
 
 // Add css files
@@ -12,21 +13,27 @@ import 'jquery';
 import 'popper.js';
 import 'bootstrap';
 
-class Home extends React.Component {
-    render() {
-        return (
-            <div className="card">
-                <img className="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap" />
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and fill the card's content.</p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        )
+
+let sec =60;
+let min =60;
+let hour =24;
+
+let counter = setInterval(() => {
+    ReactDOM.render(<Card segundos={sec} minutos={min} horas={hour}  />, document.querySelector("#root"));
+    sec--;
+    if (sec == 0){
+        sec=60;
+        min--;
+    } else if(min == 0){
+        min=60;
+        hour--;
+    } else if (hour==0){
+        hour=24;
+        clearInterval(counter);
     }
-}
-ReactDOM.render(<Home name="Jonathan M." />, document.querySelector("#root"));
+
+   
+},10);
 
 
 
