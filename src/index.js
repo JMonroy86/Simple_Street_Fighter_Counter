@@ -33,9 +33,7 @@ let counter = setInterval(() => {
         sec =59;
         clearInterval(counter);
     }
-
-   
-},1);
+},1000);
 
 
 

@@ -22,6 +22,7 @@ const gameOver = () => {
                             <img src="public/img/coin.png" class="animated infinite flip float-right" width="50" height="50" alt="" />
                         </div>
                     </div>
+                    <input type="text" value="text"/>
                 </div>
             </div>
         </div>
